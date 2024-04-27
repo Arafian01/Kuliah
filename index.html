@@ -32,7 +32,7 @@
               <div class="card-body">
                 <div  class="d-flex justify-content-center">
                   <h1 class="h1 fw-bold text-center mb-5 mt-5 text-white">LOGIN</h1> 
-                  <h1 class="text-secondaly mt-5 position-absolute " style="font-size: 45px; z-index: -1000; opacity: .9; font-weight:1000;">LOGIN</h1>
+                  <h1 class="text-secondary mt-5 position-absolute " style="font-size: 45px; z-index: -1000; opacity: .9; font-weight:1000;">LOGIN</h1>
                 </div>
                 <div class="form-floating mb-3">
                   <input type="email" class="form-control" id="inputEmail" placeholder="Email">
@@ -85,14 +85,24 @@
       var email = document.getElementById("inputEmail").value;
       var pass = document.getElementById("inputPassword").value;
       var captcha = document.getElementById("inputCaptcha").value;
+      var remember = document.getElementById("gridCheck").checked;
+      var login;
 
       if(dbemail === email && dbpass === pass && dbcaptcha === captcha){
         document.getElementById("pesan").innerHTML = "Login sukses";
+        login = "Berhasil";
       } else if(dbemail === email && dbpass === pass && dbcaptcha != captcha){
         document.getElementById("pesan").innerHTML = "ups! Captcha salah";
       } else if(dbemail != email || dbpass != pass){
         document.getElementById("pesan").innerHTML = "email atau password salah!";
       }
+
+      if(remember == true && login === "Berhasil"){
+        console.log("Berhasil");
+      } else {
+        console.log("Gagal");
+      }
+      
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
