@@ -71,23 +71,18 @@
     </div>
    </div>
   </div>
- </section>
- <div class="modal" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-   <div class="modal-content">
-    <div class="modal-header">
-     <h1 class="modal-title fs-5" id="exampleModalLabel">Peringatan!!</h1>
-     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="hide"></button>
+  <div class="card position-absolute top-50 start-50 translate-middle text-bg-light" style="width: 550px;" id="alert"> 
+    <div class="card-header row mt-2 ">
+      <h5 class="col-11 ">Peringatan!</h5>
+      <button type="button" class="btn-close col-auto" id="hide"></button>
     </div>
-    <div class="modal-body">
-     <p id="pesan"></p>
-    </div>
-    <div class="modal-footer">
-     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" id="hide">OKE</button>
+    <div class="card-body text-end">
+      <p id="pesan" class="text-start"></p>
+      <button type="button" class="btn col-auto" id="hide">Oke</button>
     </div>
    </div>
-  </div>
- </div>
+ </section>
+
 
  <script src="script.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

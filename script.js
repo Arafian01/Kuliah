@@ -1,32 +1,42 @@
 $(document).ready(function () {
     var n1 = Math.round(Math.random() * 10);
     var n2 = Math.round(Math.random() * 10);
-    var captcha2 = n1 + " + " + n2;
+    var captchai = n1 + " + " + n2;
     // alert(n1 + " + " + n2);
-    $('#img').text(captcha2);
+    $('#img').text(captchai);
+    $('#alert').hide();
 
     $("#btnLogin").button().click(function () {
-        console.log(eval(captcha2));
+        // console.log(eval(captcha2));
         var dbemail = "admin@gmail.com";
         var dbpass = "admin";
         var email = $("#inputEmail").val();
         var pass = $("#inputPassword").val();
         var captcha = $("#inputCaptcha").val();
         // var remember = $("gridCheck").checked;
-        var captcha3 = eval(captcha2);
+        // var captcha3 = eval(captcha2);
 
 
-        if (dbemail == email && dbpass == pass && captcha == eval(captcha2)) {
-            $(location).attr('href','https://Arafian01.github.io')
-            $("#pesan").text("Login berhasil!");
-        } else if (dbemail == email && dbpass == pass && captcha != eval(captcha2) ) {
-            $("#modal").show();
+        if (dbemail == email && dbpass == pass) {
+            if(captcha == eval(captchai)){
+                $(location).attr('href','https://Arafian01.github.io')
+                $("#pesan").text("Login berhasil!");
+                $('#alert').show();
+            } else {
             $("#pesan").text("ups! Captcha salah");
-            console.log("berhasil");
-        } else if (dbemail != email || dbpass != pass) {
+            $('#alert').show();
+            }
+        } else {
             $("#pesan").text("email atau password salah!");
-            $("#modal").show();
-        } 
+            $('#alert').show();
+        }
+        // else if (dbemail == email && dbpass == pass && captcha != eval(captcha2) ) {
+        //     $("#modal").show();
+        //     $("#pesan").text("ups! Captcha salah");
+        //     console.log("berhasil");
+        // } else if (dbemail != email || dbpass != pass) {
+        //     $("#pesan").text("email atau password salah!");
+        //     $("#modal").show();
 
         // if (remember == true && login === "Berhasil") {
         //     console.log("Email : " + email);
@@ -35,8 +45,8 @@ $(document).ready(function () {
         //     login = "Gagal";
         // }
     })
-    $("#hide").click(function(){
-        $("#modal").hide();
+    $("#hide").button.click(function(){
+        $("#alert").hide();
       });
 });
 
