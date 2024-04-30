@@ -14,18 +14,19 @@ $(document).ready(function () {
         var captcha = $("#inputCaptcha").val();
         // var remember = $("gridCheck").checked;
         var captcha3 = eval(captcha2);
-        console.log(email);
-        console.log(pass);
 
 
         if (dbemail == email && dbpass == pass && captcha == eval(captcha2)) {
-            alert('Berhasil');
-            console.log("Berhasil");
-        } else if (dbemail === email && dbpass === pass ) {
-            $("pesan").innerHTML = "ups! Captcha salah";
+            $(location).attr('href','https://Arafian01.github.io')
+            $("#pesan").text("Login berhasil!");
+        } else if (dbemail == email && dbpass == pass && captcha != eval(captcha2) ) {
+            $("#modal").show();
+            $("#pesan").text("ups! Captcha salah");
+            console.log("berhasil");
         } else if (dbemail != email || dbpass != pass) {
-            $("pesan").innerHTML = "email atau password salah!";
-        }
+            $("#pesan").text("email atau password salah!");
+            $("#modal").show();
+        } 
 
         // if (remember == true && login === "Berhasil") {
         //     console.log("Email : " + email);
@@ -34,6 +35,9 @@ $(document).ready(function () {
         //     login = "Gagal";
         // }
     })
+    $("#hide").click(function(){
+        $("#modal").hide();
+      });
 });
 
 // captchai = document.getElementById("img");
