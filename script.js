@@ -5,6 +5,10 @@ $(document).ready(function () {
     // alert(n1 + " + " + n2);
     $('#img').text(captchai);
     $('#alert').hide();
+    
+    $("a").click(function(){
+        $("#alert").hide();
+    });
 
     $("#btnLogin").button().click(function () {
         // console.log(eval(captcha2));
@@ -21,14 +25,14 @@ $(document).ready(function () {
             if(captcha == eval(captchai)){
                 $(location).attr('href','https://Arafian01.github.io')
                 $("#pesan").text("Login berhasil!");
-                $('#alert').show();
+                $('#alert').show(300);
             } else {
             $("#pesan").text("ups! Captcha salah");
-            $('#alert').show();
+            $('#alert').show(300);
             }
         } else {
             $("#pesan").text("email atau password salah!");
-            $('#alert').show();
+            $('#alert').show(300);
         }
         // else if (dbemail == email && dbpass == pass && captcha != eval(captcha2) ) {
         //     $("#modal").show();
@@ -45,9 +49,6 @@ $(document).ready(function () {
         //     login = "Gagal";
         // }
     })
-    $("#hide").button.click(function(){
-        $("#alert").hide();
-      });
 });
 
 // captchai = document.getElementById("img");
