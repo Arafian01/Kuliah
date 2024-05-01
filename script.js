@@ -23,11 +23,11 @@ $(document).ready(function () {
                 $(location).attr('href','https://Arafian01.github.io')
             } else {
                 $("#pesan").text("ups! Captcha salah");
-                $('#alert').show(200);
+                $('#alert').fadeIn("slow");
             }
         } else {
             $("#pesan").text("email atau password salah!");
-            $('#alert').show(200);
+            $('#alert').fadeIn("slow");
         }
     })
 });
