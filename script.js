@@ -4,8 +4,8 @@ $(document).ready(function () {
     var captchai = n1 + " + " + n2;
     $('#img').text(captchai);
     $('#alert').hide();
-    
-    $("a").click(function(){
+
+    $("a").click(function () {
         $("#alert").hide();
     });
 
@@ -19,8 +19,8 @@ $(document).ready(function () {
         // var captcha3 = eval(captcha2);
 
         if (dbemail == email && dbpass == pass) {
-            if(captcha == eval(captchai)){
-                $(location).attr('href','https://Arafian01.github.io')
+            if (captcha == eval(captchai)) {
+                $(location).attr('href', 'https://Arafian01.github.io')
             } else {
                 $("#pesan").text("ups! Captcha salah");
                 $('#alert').fadeIn("slow");
