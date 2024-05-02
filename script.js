@@ -1,13 +1,9 @@
 $(document).ready(function () {
-    // Tampilkan loading saat dokumen siap
     $('#loading').show();
 
-    // Sembunyikan loading saat semua konten dimuat
     $(window).on('load', function(){
-        $('#loading').fadeOut(2000);
+        $('#loading').fadeOut(3000);
     });
-
-    // Tampilkan loading saat berpindah halaman
 
     var n1 = Math.round(Math.random() * 10);
     var n2 = Math.round(Math.random() * 10);
