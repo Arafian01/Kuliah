@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#loading').show();
 
-    $(window).on('load', function(){
+    $(window).on('load', function () {
         $('#loading').fadeOut(3000);
     });
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
         if (dbemail == email && dbpass == pass) {
             if (captcha == eval(captchai)) {
                 $('#loading').show();
-                setTimeout(function(){
+                setTimeout(function () {
                     $(location).attr('href', 'https://Arafian01.github.io')
                 }, 2000);
             } else {
