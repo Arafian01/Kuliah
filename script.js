@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    $('#loading').show();
-
-    $(window).on('load', function () {
-        $('#loading').fadeOut(3000);
-    });
+    $('#loading').fadeOut(1000);
 
     var n1 = Math.round(Math.random() * 10);
     var n2 = Math.round(Math.random() * 10);
@@ -29,7 +25,7 @@ $(document).ready(function () {
                 $('#loading').show();
                 setTimeout(function () {
                     $(location).attr('href', 'https://Arafian01.github.io')
-                }, 2000);
+                }, 1000);
             } else {
                 $("#pesan").text("ups! Captcha salah");
                 $('#alert').fadeIn("slow");
