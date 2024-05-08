@@ -24,7 +24,7 @@ $(document).ready(function () {
             if (captcha == eval(captchai)) {
                 $('#loading').show();
                 setTimeout(function () {
-                    $(location).attr('href', 'cv-portofolio.html')
+                    $(location).attr('href', 'CV/cv-portofolio.html')
                 }, 1000);
             } else {
                 $("#pesan").text("ups! Captcha salah");
