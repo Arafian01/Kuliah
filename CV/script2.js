@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    // $("#home").hide();
+    $("#home").hide();
 });
